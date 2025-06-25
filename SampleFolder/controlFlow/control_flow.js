@@ -43,3 +43,22 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let IsEmployee = prompt("What is your role ? Employee, Enrolled Member, Subscriber ou Non-Subscriber.");
+let CodeAccess;
+
+switch (IsEmployee){
+    case "Employee" : 
+        CodeAccess = "Dietary Services";
+        break;
+    case "Enrolled Member" : 
+        CodeAccess = "Dietary Services and one-on-one interaction with a dietician";
+        break;
+    case "Subscriber" : 
+        CodeAccess = "Partial access to Dietary Services";
+        break;
+    default :
+        CodeAccess = "Rôle non reconnu. Veuillez choisir : Employee, Enrolled Member, Subscriber ou Non-Subscriber."
+}
+
+console.log(CodeAccess)
